@@ -3,6 +3,7 @@
 import Foundation
 
 class PrimeFactor {
+    
     func calculate(n: Int) -> [Int] {
         var primeFactors = [Int]()
         let halfN: Int = n/2
@@ -15,6 +16,14 @@ class PrimeFactor {
             primeFactors.append(n)
         }
         return primeFactors
+    }
+    
+    func nextPrime(n: Int) -> Int {
+        var x = n + 1
+        while (!prime(n: x)) {
+            x = x+1
+        }
+        return x
     }
 }
 
